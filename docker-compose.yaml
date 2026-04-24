@@ -1,0 +1,50 @@
+services:
+  orqestly-api:
+    image: ghcr.io/orqestly/orqestly-api:${IMAGE_TAG:-main}
+    container_name: orqestly-api
+    restart: unless-stopped
+    environment:
+      ORQESTLY_ENV: ${ORQESTLY_ENV:-production}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://orqestly:orqestly@infra-postgres:5432/orqestly}
+      REDIS_URL: ${REDIS_URL:-redis://infra-redis:6379/0}
+      JIRA_BASE_URL: ${JIRA_BASE_URL:-}
+      JIRA_PROJECT_KEY: ${JIRA_PROJECT_KEY:-}
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)",
+        ]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+    networks:
+      - orqestly-net
+      - edge-proxy
+
+  orqestly-worker:
+    image: ghcr.io/orqestly/orqestly-worker:${IMAGE_TAG:-main}
+    container_name: orqestly-worker
+    restart: unless-stopped
+    depends_on:
+      orqestly-api:
+        condition: service_started
+    environment:
+      ORQESTLY_ENV: ${ORQESTLY_ENV:-production}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://orqestly:orqestly@infra-postgres:5432/orqestly}
+      REDIS_URL: ${REDIS_URL:-redis://infra-redis:6379/0}
+      JIRA_BASE_URL: ${JIRA_BASE_URL:-}
+      JIRA_PROJECT_KEY: ${JIRA_PROJECT_KEY:-}
+    networks:
+      - orqestly-net
+
+networks:
+  orqestly-net:
+    name: orqestly-net
+  edge-proxy:
+    external: true
+    name: edge-proxy

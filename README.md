@@ -29,8 +29,30 @@ Orqestly:
 ## 🧠 Core Concept
 
 ```text
-Requirements → AI Understanding → Test Plan → Agents Execution → Validation → Bug Reports
+Requirements + Specs → Plan → Execute → Review/Approve → Rerun/Close → Verified Reports
 ```
+
+## 📘 System Requirements
+
+The implementation source of truth is [SYSTEM_REQUIREMENTS.md](SYSTEM_REQUIREMENTS.md). It defines the first product scope, success metrics, risks, and phase mapping for Orqestly.
+
+## 📚 Documentation Map
+
+- [SYSTEM_REQUIREMENTS.md](SYSTEM_REQUIREMENTS.md) — product scope and requirements
+- [TECHNICAL_SPECIFICATION.md](TECHNICAL_SPECIFICATION.md) — lifecycle contracts, approvals, statuses, memory, integrations, and skills
+- [ARCHITECTURE.md](ARCHITECTURE.md) — system boundaries and component roles
+- [SUCCESS_METRICS.md](SUCCESS_METRICS.md) — measurable success criteria
+- [PHASE1_EXECUTION_PLAN.md](PHASE1_EXECUTION_PLAN.md) — milestone-based execution roadmap with ownership and delivery gates
+- [STATUS_TRANSITION_TABLE.md](STATUS_TRANSITION_TABLE.md) — lifecycle status transition contracts
+- [APPROVAL_GATE_MATRIX.md](APPROVAL_GATE_MATRIX.md) — human approval gates and decision policies
+- [JIRA_FIELD_MAPPING.md](JIRA_FIELD_MAPPING.md) — deterministic defect and status mapping for Jira sync
+- [MILESTONE2_REFERENCE_RUN.md](MILESTONE2_REFERENCE_RUN.md) — canonical end-to-end validation run for Milestone 2
+- [MILESTONE3_GOVERNANCE_TEST_PACK.md](MILESTONE3_GOVERNANCE_TEST_PACK.md) — governance and skill validation test pack for Milestone 3
+- [PHASE1_ROLLOUT_CHECKLIST.md](PHASE1_ROLLOUT_CHECKLIST.md) — release-readiness checklist with milestone sign-off gates
+- [TECH_STACK_FREEZE.md](TECH_STACK_FREEZE.md) — frozen Phase 1 stack and technology decisions
+- [SIGNOFF_TEMPLATE.md](SIGNOFF_TEMPLATE.md) — standard approval template for milestone and release gates
+- [DEPLOYMENT_BASELINE.md](DEPLOYMENT_BASELINE.md) — container deployment assumptions and VPS infra connectivity baseline
+- [docker-compose.yaml](docker-compose.yaml) — service wiring starter for API/worker with external infra and edge proxy network
 
 ---
 
@@ -39,6 +61,11 @@ Requirements → AI Understanding → Test Plan → Agents Execution → Validat
 * AI-powered requirement parsing
 * Autonomous multi-agent testing system
 * UI, API, and functional validation
+* Lifecycle orchestration with explicit status tracking
+* Human-in-the-loop approvals and governance gates
+* Persistent orchestration memory across runs
+* Integration adapters for management tools (for example Jira)
+* Skill-based runtime (starting with HTTP request/API validation)
 * Evidence collection (logs, screenshots)
 * Structured defect generation (CSV/JSON)
 * CI/CD integration ready
