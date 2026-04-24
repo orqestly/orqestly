@@ -53,6 +53,18 @@ The implementation source of truth is [SYSTEM_REQUIREMENTS.md](SYSTEM_REQUIREMEN
 - [SIGNOFF_TEMPLATE.md](SIGNOFF_TEMPLATE.md) — standard approval template for milestone and release gates
 - [DEPLOYMENT_BASELINE.md](DEPLOYMENT_BASELINE.md) — container deployment assumptions and VPS infra connectivity baseline
 - [docker-compose.yaml](docker-compose.yaml) — service wiring starter for API/worker with external infra and edge proxy network
+- [OPERATIONS_RUNBOOK.md](OPERATIONS_RUNBOOK.md) — common operations, troubleshooting, and recovery procedures
+- [SLO_AND_ALERTING.md](SLO_AND_ALERTING.md) — Phase 1 service-level targets and alert thresholds
+- [ERROR_CLASSIFICATION.md](ERROR_CLASSIFICATION.md) — failure taxonomy for orchestration, integrations, and skills
+- [EVIDENCE_RETENTION_POLICY.md](EVIDENCE_RETENTION_POLICY.md) — evidence storage, retention, and purge rules
+- [SECURITY_OPERATIONS_BASELINE.md](SECURITY_OPERATIONS_BASELINE.md) — operational security controls and access baseline
+- [CI_CD_RELEASE_CONTRACT.md](CI_CD_RELEASE_CONTRACT.md) — CI/CD build, image, and release rules
+- [CAPACITY_PLAN_PHASE1.md](CAPACITY_PLAN_PHASE1.md) — initial workload and resource assumptions for Phase 1
+- [DOC_GOVERNANCE_SLA.md](DOC_GOVERNANCE_SLA.md) — documentation ownership and review cadence
+- [METRICS_COLLECTION_SPEC.md](METRICS_COLLECTION_SPEC.md) — how success metrics are collected and reported
+- [CI_CD_PIPELINE_SPEC.md](CI_CD_PIPELINE_SPEC.md) — detailed GitHub CI/CD workflow blueprint
+- [OBSERVABILITY_DASHBOARD_SPEC.md](OBSERVABILITY_DASHBOARD_SPEC.md) — concrete dashboard panels and alerts
+- [RUNBOOK_CHECKLISTS.md](RUNBOOK_CHECKLISTS.md) — per-scenario operational checklists
 
 ---
 

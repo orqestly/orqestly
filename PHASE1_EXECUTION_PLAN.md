@@ -57,6 +57,30 @@ Deliver a working orchestration platform for form-based UI validation with lifec
 - Reuse `infra-postgres` and `infra-redis` as external dependencies.
 - Ensure API routing through `edge-nginx` reverse proxy.
 
+### 7. Operations and Failure Handling
+
+- Define runbook steps for API, worker, Redis, Postgres, and Jira failures.
+- Define SLO targets and alert thresholds.
+- Define error classification and recovery policy.
+
+### 8. Security and Release Controls
+
+- Define evidence retention and purge rules.
+- Define security operations baseline for secrets, access, and audit logs.
+- Define CI/CD release contract for build, publish, deploy, and rollback.
+
+### 9. Capacity and Governance Controls
+
+- Define Phase 1 capacity assumptions and scale triggers.
+- Define documentation governance SLA and review cadence.
+- Define metrics collection specification for milestone reporting.
+
+### 10. CI/CD and Observability Blueprint
+
+- Define detailed CI/CD workflow stages and release gates.
+- Define dashboard panels and alert definitions.
+- Define runbook checklists for common operational scenarios.
+
 ## Milestones
 
 ### Milestone 1: Contracts Locked
@@ -134,5 +158,17 @@ Deliver a working orchestration platform for form-based UI validation with lifec
 - [SIGNOFF_TEMPLATE.md](SIGNOFF_TEMPLATE.md)
 - [DEPLOYMENT_BASELINE.md](DEPLOYMENT_BASELINE.md)
 - [docker-compose.yaml](docker-compose.yaml)
+- [OPERATIONS_RUNBOOK.md](OPERATIONS_RUNBOOK.md)
+- [SLO_AND_ALERTING.md](SLO_AND_ALERTING.md)
+- [ERROR_CLASSIFICATION.md](ERROR_CLASSIFICATION.md)
+- [EVIDENCE_RETENTION_POLICY.md](EVIDENCE_RETENTION_POLICY.md)
+- [SECURITY_OPERATIONS_BASELINE.md](SECURITY_OPERATIONS_BASELINE.md)
+- [CI_CD_RELEASE_CONTRACT.md](CI_CD_RELEASE_CONTRACT.md)
+- [CAPACITY_PLAN_PHASE1.md](CAPACITY_PLAN_PHASE1.md)
+- [DOC_GOVERNANCE_SLA.md](DOC_GOVERNANCE_SLA.md)
+- [METRICS_COLLECTION_SPEC.md](METRICS_COLLECTION_SPEC.md)
+- [CI_CD_PIPELINE_SPEC.md](CI_CD_PIPELINE_SPEC.md)
+- [OBSERVABILITY_DASHBOARD_SPEC.md](OBSERVABILITY_DASHBOARD_SPEC.md)
+- [RUNBOOK_CHECKLISTS.md](RUNBOOK_CHECKLISTS.md)
 
 This plan is the execution layer for Phase 1 and should be updated when milestone gates are passed.
