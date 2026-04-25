@@ -52,6 +52,7 @@ The implementation source of truth is [SYSTEM_REQUIREMENTS.md](SYSTEM_REQUIREMEN
 
 ### Execution & Planning
 - [PHASE1_EXECUTION_PLAN.md](PHASE1_EXECUTION_PLAN.md) — milestone-based execution roadmap with ownership and delivery gates
+- [TEAM_OWNERSHIP_RACI.md](TEAM_OWNERSHIP_RACI.md) — team ownership model with milestone-aligned outcomes and RACI matrix
 - [PHASE1_ROLLOUT_CHECKLIST.md](PHASE1_ROLLOUT_CHECKLIST.md) — release-readiness checklist with milestone sign-off gates
 - [SIGNOFF_TEMPLATE.md](SIGNOFF_TEMPLATE.md) — standard approval template for milestone and release gates
 
